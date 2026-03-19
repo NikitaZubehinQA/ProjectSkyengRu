@@ -55,10 +55,10 @@ public class MainPage {
     }
 
     public MainPage clickPassTest() {
-        SelenideElement passTest = $$x("//*[self::a or self::button or @role='button'][contains(normalize-space(),'Пройти тест')]")
-                .filter(visible)
-                .first();
-        passTest.scrollTo().click();
+        headerMenuItems.findBy(text("Тест на уровень"))
+                .shouldBe(visible)
+                .scrollTo()
+                .click();
         return this;
     }
 

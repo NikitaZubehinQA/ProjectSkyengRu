@@ -59,13 +59,13 @@ public class WebTests extends TestBase {
     }
 
     @Test
-    @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
+    @DisplayName("По пункту 'Тест на уровень' осуществляется переход к тесту на подбор курса")
     @Severity(SeverityLevel.CRITICAL)
     public void checkSwitchingToCoursesTestThruLink() {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
-        step("Кликнуть Пройти тест", () ->
+        step("Кликнуть Тест на уровень", () ->
                 mainPage.clickPassTest());
         step("Проверить, что тест отобразился", () ->
                 mainPage.verifyQuizAppears());
