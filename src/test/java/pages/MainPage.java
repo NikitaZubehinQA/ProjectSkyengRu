@@ -55,7 +55,10 @@ public class MainPage {
     }
 
     public MainPage clickPassTest() {
-        $x("//div[@class='note-item -desktop']/span[@class='note-link']").click(); // ссылка отсутствует
+        SelenideElement passTest = $$x("//*[self::a or self::button or @role='button'][contains(normalize-space(),'Пройти тест')]")
+                .filter(visible)
+                .first();
+        passTest.scrollTo().click();
         return this;
     }
 
