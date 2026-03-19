@@ -59,7 +59,6 @@ public class WebTests extends TestBase {
     }
 
     @Test
-    @Disabled
     @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
     @Severity(SeverityLevel.CRITICAL)
     public void checkSwitchingToCoursesTestThruLink() {
